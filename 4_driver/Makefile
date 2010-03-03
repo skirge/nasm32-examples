@@ -33,10 +33,10 @@ $(BUILDDIR):
 		-mkdir	$(BUILDDIR)
 
 $(APP).exe: $(APP_OBJ) $(RES)
-		$(LINK) $(LINKFLAGS) $(foreach ble,$^,"$(ble)") $(DLLS)
+		$(LINK) $(LINKFLAGS) $(subst /,\,$(foreach ble,$^,"$(ble)")) $(DLLS)
 
 $(TEST).exe: $(TEST_OBJ) $(RES)
-		$(LINK) $(LINKFLAGS) $(foreach ble,$^,"$(ble)") $(DLLS)
+		$(LINK) $(LINKFLAGS) $(subst /,\,$(foreach ble,$^,"$(ble)")) $(DLLS)
 		        
 run:    $(APP).exe
 		$(BUILDDIR)/$(APP).exe
