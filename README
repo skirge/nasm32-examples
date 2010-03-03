@@ -1,0 +1,4 @@
+Q: How to link with GoLink on Linux
+A: Assuming you have Wine you need dll files copied from Windows system.
+   Put them in .wine/drive_c/windows/system32 directory
+
